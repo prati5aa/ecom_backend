@@ -21,9 +21,6 @@ app.use('/uploads', express.static(uploadDir));
 
 app.use("/api/v1",router)
 
-app.get("/api/v1",(req,res)=>{
-    res.send("serve is listing at /api/v1")
-})
 app.use(handleError)
 
 
