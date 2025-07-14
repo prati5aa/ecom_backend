@@ -59,7 +59,10 @@ const createUser=async(req,res,next)=>
         res.status(500).send({message:'Internal server error'})
     }
 }
-
+const getOwnInfo=(req,res)=>{
+  res.send(req?.user)
+  
+}
 
 const login=async(req,res,next)=>
 {
@@ -101,5 +104,6 @@ const login=async(req,res,next)=>
 }
 module.exports={
     createUser,
+    getOwnInfo,
     login
 }
